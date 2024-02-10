@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Blogmon</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <%-include('nav')%>
+    </header>
+    <section id="about">
+        <div class="dp">
+            <img src="../img/AmanSVG.png" alt="">
+        </div>
+        <div class="intro">
+            <h5 CLASS="im">Hello Everyone! I am</h5>
+            <h1 class="name">Aman Kumar</h1>
+            <p>Greetings and welcome to my blog. The purpose of this platform is to chronicle my experiences, challenges, progress, and accomplishments. Maintaining a detailed record enables me to discern patterns, avoid recurring errors, and glean valuable insights. Currently enrolled in the Diploma in Computer Engineering program at DSEU Ambedkar Shakarpur, I am dedicated to self-improvement. Throughout this journey, I endeavor to explore various subjects that intrigue me, including graphics designing, web development technologies, and entrepreneurship, among others. PS: "This website serves as a prototype but is fully operational. Additionally, I have curated a separate database containing my blogs. You are encouraged to explore its functionality, including features such as editing, deleting, and composing new content."
+            </p>
+        </div>
+    </section>
+    <section id="posts">
+        <div class="container">
+            <% articles.forEach(article=> {%>
+                <div class="card">
+                    <div class="card__body">
+                        <h3>
+                            <%=article.title%>
+                        </h3>
+                        <p class="box-para">
+                            <%=article.description%>
+                        </p>
+                    </div>
+                    <div class="card__footer">
+                        <div class="date_info">
+                            <div class="date">
+                                <h5><%=article.createdAt.toLocaleDateString('en-us', {month:"short", day:"numeric"})%>
+                                </h5>
+                                <small>
+                                    <%=article.createdAt.getFullYear()%>
+                                </small>
+                            </div>
+                            <div class="options opt-post">
+                                <button class="btn-y"><a href="articles/<%=article.slug%>">Read more</a></button>
+                                <button class="btn-x"><a href="articles/edit/<%=article.id%>">Edit</a></button>
+                                <form action="/articles/<%=article.id%>?_method=DELETE" method="POST">
+                                    <button type="submit" class="btn-z">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%})%>
+        </div>
+    </section>
+    <section id="footer">
+        <%-include('footer')%>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Blogmon</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <%-include('nav')%>
+    </header>
+    <div class="recent">
+        <div class="container form-container">
+            <br>
+            <div class="card">
+                <div class="cardpad">
+                    <h1>Edit Article</h1>
+                    <form action="/articles/<%=article.id%>?_method=PUT" method="post">
+                        <%-include('form_field')%>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

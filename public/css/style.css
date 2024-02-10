@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0 10% 0 10%;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* Nav Bar CSS */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    font-weight: bold;
+    width: 60px;
+    margin: 0 12px;
+}
+
+.tabs {
+    display: flex;
+    margin-left: auto;
+}
+
+.search {
+    margin: 0 auto;
+}
+
+/* Tags CSS */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+textarea{
+    min-height: 60px;
+}
+
+/* Intro CSS */
+
+section .intro h1 {
+    font-weight: 900;
+}
+
+section .intro p {
+    text-align: justify;
+    font-style: italic;
+    color: darkslategrey;
+    font-size: 0.8rem;
+    min-width: 270px;
+}
+
+
+#about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 2%;
+    justify-content: center;
+    width: 90%;
+}
+
+.name {
+    font-family: 'Alex Brush';
+    font-size: calc(6vw);
+}
+
+.im {
+    font-size: 1rem;
+    color: gray;
+}
+
+.dp {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dp img {
+    width: 360px;
+    margin-top: 1rem;
+}
+
+/* Rcnt Post CSS */
+.recent {
+    display: flex;
+}
+
+.recent .container {
+    padding: 3rem 0rem;
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.recent .container .card {
+    width: 100%;
+}
+
+/* Card CSS */
+
+#posts {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 1rem;
+}
+
+.recent .form-container {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ECE9E6;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow: hidden;
+}
+
+.box-para {
+    font-size: .75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+    color: #fafafa;
+    background: darkslategray;
+}
+
+.tag+.tag {
+    margin-left: .5em;
+}
+
+
+.card__body .card-title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card__body p {
+    font-size: 0.8rem;
+}
+
+.card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.date_info {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+}
+
+small {
+    color: #666;
+}
+
+.options {
+    margin-top: auto;
+}
+
+.opt-post {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.recent-opt {
+    display: flex;
+    margin-left: auto;
+    gap: 0.5rem;
+}
+
+
+.btn-x,
+.btn-y,
+.btn-z {
+    min-width: 45px;
+    padding: 6px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.btn-x {
+    border: 2px solid black;
+    background: white;
+    color: black;
+}
+
+.btn-y {
+    color: white;
+    background: #e91e63;
+    border: 2px solid #e91e63;
+}
+
+.btn-z {
+    border: 2px solid black;
+    background: black;
+    color: white;
+}
+
+.small-btn {
+    font-size: 12px;
+}
+
+/* Footer CSS */
+
+#footer {
+    padding-top: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10rem;
+    margin: 1rem auto 0 auto;
+
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.ico {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ico i {
+    color: #444;
+}
+
+.media {
+    font-size: 0.6rem;
+    color: grey;
+}
+
+.copyright {
+    width: 10rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: darkgrey;
+    margin: 0.6rem 0;
+}
+
+/* Form CSS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+
+.form-group input,
+textarea {
+    border: 1px solid lightgrey;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    max-width: -webkit-fill-available;
+}
+
+.markdown{
+    min-height: 100px;
+}
+
+.cardpad {
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 1080px) {
+    body {
+        padding: 0 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #about {
+        flex-direction: column;
+    }
+
+    .name {
+        font-size: -webkit-xxx-large;
+    }
+
+    .blogmon {
+        font-size: x-large;
+    }
+
+    .cardpad h1 {
+        font-size: x-large
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .blogmon {
+        font-size: large;
+    }
+
+    .tabs li {
+        padding: 6px 0;
+    }
+
+    .tabs li:nth-child(3) {
+        display: none;
+        width: 0;
+    }
+    .tabs li:nth-child(1) a, .tabs li:nth-child(2) a{
+        padding: 6px;
+        border-radius: 12px;
+        font-weight: 700;
+        text-align: center;
+        margin: 9px 0;
+        font-size: 12px;
+        padding: 3px 11px;
+    }
+    .tabs li:nth-child(1) a {
+        color: white;
+        background: #e91e63;
+        border: 2px solid #e91e63;
+    }
+
+    .tabs li:nth-child(2) a {
+        border: 2px solid #e91e63;
+        background: white;
+        color: #e91e63;
+    }
+
+    .dp img {
+        width: 280px;
+    }
+
+    .cardpad h1 {
+        font-size: large
+    }
+}

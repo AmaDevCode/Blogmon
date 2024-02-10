@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Blogmon</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <%-include('nav')%>
+    </header>
+    <section class="recent">
+        <div class="container">
+            <div class="card">
+                <div class="card__body">
+                    <h1 class="card-title"><%=article.title%></h1>
+                    <p><%=article.description%></p>
+                    <div>
+                        <%-article.sanitizedHTML%>
+                    </div>
+                </div>
+                <div class="card__footer">
+                    <div class="date_info">
+                        <div class="date">
+                            <h5><%=article.createdAt.toLocaleDateString('en-us', {month:"short", day:"numeric"})%> </h5>
+                            <small><%=article.createdAt.getFullYear()%></small>
+                        </div>
+                        <div class="options recent-opt">
+                            <button class="btn-x"><a href="edit/<%=article.id%>">Edit</a></button>
+                            <form action="/articles/<%=article.id%>?_method=DELETE" method="POST">
+                                <button type="submit" class="btn-z">Delete</button>
+                            </form>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <%-include('footer')%>
+    </footer>
+</body>
+
+</html>
